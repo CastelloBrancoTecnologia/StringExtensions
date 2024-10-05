@@ -15,14 +15,19 @@
     <SignAssembly>False</SignAssembly>
     <Company>Castello Branco Tecnologia</Company>
     <Product>CastelloBranco.StringExtensions</Product>
+    <AssemblyVersion>2410.5.2050.8</AssemblyVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <IsAotCompatible>True</IsAotCompatible>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <IsAotCompatible>True</IsAotCompatible>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <IsAotCompatible>True</IsAotCompatible>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <IsAotCompatible>True</IsAotCompatible>
+    </PropertyGroup>
 
+    <Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec">
+	    <Message Text="Push NuGet Package to NuGet Feed" Importance="high"></Message>
+	    <Exec Command="$(ProjectDir)..\publicanuget.cmd &quot;$(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg&quot; "></Exec>
+    </Target>
 </Project>
