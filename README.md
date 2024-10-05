@@ -1,4 +1,4 @@
-# CastelloBranco.StringExtensions Library
+# StringExtensions 
 
 ## Overview
 
