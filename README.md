@@ -69,9 +69,13 @@ This library includes functions that are missing in .NET, offering robust soluti
 
 ---
 
+## Package
+
+Nuget CastelloBranco.StringExtensions - https://www.nuget.org/packages/CastelloBranco.StringExtensions/
+
 ## Installation
 
-To use this library in your .NET project, include it as a dependency in your project file or download the source code and compile it with your application.
+To use this library in your .NET project, include CastelloBranco.StringExtensions package from nuget or or download the source code and compile it with your application
 
 ---
 
