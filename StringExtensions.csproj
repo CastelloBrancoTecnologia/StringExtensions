@@ -15,7 +15,9 @@
     <SignAssembly>False</SignAssembly>
     <Company>Castello Branco Tecnologia</Company>
     <Product>CastelloBranco.StringExtensions</Product>
-    <AssemblyVersion>2410.5.2050.8</AssemblyVersion>
+    <AssemblyVersion>2410.5.2156.10</AssemblyVersion>
+    <FileVersion>1.0:0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

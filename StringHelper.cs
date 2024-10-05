@@ -165,16 +165,30 @@ public static partial class StringHelper
         return sb.ToString();
     }
 
-    public static string Base64StringEncode(this string input, System.Text.Encoding? encoding = null)
+    public static string ToBase64 (this string input, System.Text.Encoding? encoding = null)
     {
         byte[] encbuff = (encoding ?? System.Text.Encoding.UTF8).GetBytes(input);
 
         return Convert.ToBase64String(encbuff);
     }
 
-    public static string Base64StringDecode(this string input, System.Text.Encoding? encoding = null)
+    public static string FromBase64 (this string input, System.Text.Encoding? encoding = null)
     {
         byte[] decbuff = Convert.FromBase64String(input);
+
+        return (encoding ?? System.Text.Encoding.UTF8).GetString(decbuff);
+    }
+
+    public static string ToHex (this string input, System.Text.Encoding? encoding = null)
+    {
+        byte[] encbuff = (encoding ?? System.Text.Encoding.UTF8).GetBytes(input);
+
+        return Convert.ToHexString(encbuff).ToLowerInvariant();
+    }
+
+    public static string FromHex (this string input, System.Text.Encoding? encoding = null)
+    {
+        byte[] decbuff = Convert.FromHexString(input);
 
         return (encoding ?? System.Text.Encoding.UTF8).GetString(decbuff);
     }
@@ -508,7 +522,7 @@ public static partial class StringHelper
         return input;
     }
 
-    public static string EncodeNewLineToHtmlBrTag(this string input)
+    public static string HtmlEncodeNewLine(this string input)
     {
         return RemoveNewLines(input, "<br/>");
     }
@@ -699,24 +713,5 @@ public static partial class StringHelper
         using var sr = new StreamReader(cs);
 
         return sr.ReadToEnd();
-    }
-
-    public static byte[] FromBase64 (this string str)
-    {
-        return System.Convert.FromBase64String (str);
-    }
-
-    public static string ToBase64(byte [] data)
-    {
-        return System.Convert.ToBase64String(data);
-    }
-
-    public static string ToHexString(byte[] data)
-    {
-        return Convert.ToHexString(data).ToLowerInvariant();
-    }
-    public static byte[] FromHexString(this string str)
-    {
-        return Convert.FromHexString(str);
     }
 }
