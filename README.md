@@ -1,4 +1,4 @@
-# CBT.StringExtensions Library
+# CastelloBranco.StringExtensions Library
 
 ## Overview
 
@@ -17,7 +17,7 @@ This library includes functions that are missing in .NET, offering robust soluti
   - `OnlyAsciiLetherOrDigits()`: Removes all non-alphabetical and non-digit characters.
   - `OnlyAsciiDigits()`        : Retains only numeric characters.
   - `OnlyAllowed ()`           : Retain only allowed caracters.
-  - `RemoveDiacritics()`: Removes diacritics from strings (e.g., "ã" becomes "a").
+  - `RemoveDiacritics()`: Removes diacritics from strings (e.g., "Ã£" becomes "a").
   - `FilterWords()` Filter Words
   - `HasWords()`: get regexp MatchCollection for words
 
