@@ -16,8 +16,10 @@
     <Company>Castello Branco Tecnologia</Company>
     <Product>CastelloBranco.StringExtensions</Product>
     <AssemblyVersion>2410.5.2156.10</AssemblyVersion>
-    <FileVersion>1.0:0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <PackageProjectUrl>https://github.com/CastelloBrancoTecnologia/StringExtensions</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/CastelloBrancoTecnologia/StringExtensions</RepositoryUrl>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,4 +34,11 @@
 	    <Message Text="Push NuGet Package to NuGet Feed" Importance="high"></Message>
 	    <Exec Command="$(ProjectDir)..\publicanuget.cmd &quot;$(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg&quot; "></Exec>
     </Target>
+
+    <ItemGroup>
+      <None Update="README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
 </Project>
