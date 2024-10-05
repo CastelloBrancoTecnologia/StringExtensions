@@ -15,11 +15,12 @@
     <SignAssembly>False</SignAssembly>
     <Company>Castello Branco Tecnologia</Company>
     <Product>CastelloBranco.StringExtensions</Product>
-    <AssemblyVersion>2410.5.2156.10</AssemblyVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>2410.5.2201.12</AssemblyVersion>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://github.com/CastelloBrancoTecnologia/StringExtensions</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/CastelloBrancoTecnologia/StringExtensions</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -36,6 +37,10 @@
     </Target>
 
     <ItemGroup>
+      <None Update="LICENSE.txt">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
       <None Update="README.md">
         <Pack>True</Pack>
         <PackagePath>\</PackagePath>
